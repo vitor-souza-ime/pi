@@ -1,46 +1,54 @@
+# 🧮 π Approximation Algorithms
 
-````markdown
-# π Approximation Algorithms
+📌 *A comparative study of convergence and performance for classical and modern π (pi) approximation methods.*
 
-This Python project (`main.py`) implements and compares five well-known infinite series algorithms used to approximate the value of π (pi). The code evaluates their convergence speed and computational efficiency for a given number of terms.
+---
 
-## Algorithms Implemented
+## 📂 Overview
+
+This Python project ([`main.py`](main.py)) implements and compares **five well-known infinite series algorithms** to approximate the value of π (pi). The code evaluates their **convergence speed** and **computational efficiency** for a given number of terms.
+
+---
+
+## ⚙️ Algorithms Implemented
 
 The following mathematical methods are included:
 
-- **Leibniz Series** (Gregory-Leibniz)
-- **Nilakantha Series**
-- **Machin's Formula** (based on arctangent identities)
-- **Ramanujan Series** (high-precision series)
-- **Bailey–Borwein–Plouffe (BBP) Formula**
+| Method        | Description                                   |
+|---------------|-----------------------------------------------|
+| 🌀 **Leibniz**      | Simple alternating series (Gregory-Leibniz) |
+| 🔺 **Nilakantha**   | Extension using product of three integers   |
+| 📐 **Machin**       | Arctangent identity-based formula          |
+| 🧠 **Ramanujan**    | High-precision series with fast convergence|
+| 🧮 **BBP**          | Digit-extraction formula for π             |
 
-All series compute an approximation of π for a defined number of terms (`n_termos`), which is set to `1000` by default. The results include the computed π value, absolute and percentage errors compared to the `math.pi` reference, and computation time.
+> All algorithms compute π for a defined number of terms (`n_termos = 1000` by default).
 
-## Dependencies
+---
 
-- Python 3.6+
-- `decimal` module (standard library, for high-precision calculations)
-- `math` module (standard library)
-- `time` module (standard library)
+## 📦 Dependencies
 
-## Usage
+This project uses only Python's **standard libraries**:
 
-To run the script:
+- `decimal` (for high-precision math)
+- `math` (basic mathematical functions)
+- `time` (execution timing)
+
+✅ **No external packages required!**
+
+---
+
+## 🚀 Usage
+
+Run the script with:
 
 ```bash
 python main.py
-````
+```
 
-The output will be a formatted table showing:
+You will get a formatted comparison table:
 
-* Method name
-* Number of terms
-* Approximated value of π
-* Absolute error
-* Percentage error
-* Execution time in seconds
-
-### Example Output
+### 💡 Sample Output
 
 ```
 Método       Termos   π Aproximado         Erro Absoluto     Erro Percentual (%)    Tempo (s)
@@ -52,18 +60,26 @@ Ramanujan    1000     3.141592653589793    0.000000000000000 0.000000000000     
 BBP          1000     3.141592653589793    0.000000000000000 0.000000000000         0.005808
 ```
 
-## Notes
+---
 
-* The `decimal` module is used with increased precision (`getcontext().prec = 50`) to ensure accurate calculations in Ramanujan and BBP formulas.
-* Despite its high accuracy, the Ramanujan algorithm is computationally heavier compared to others, especially at high term counts.
+## 📝 Notes
 
-## Author
+- The `decimal` module is configured with `getcontext().prec = 50` to ensure **high-precision** results, especially for **Ramanujan** and **BBP** formulas.
+- 🐢 **Ramanujan**, despite being extremely accurate, has the **highest computational cost**.
+- 🚀 **BBP and Machin** are fast and precise, even with low term counts.
 
-This project was developed as part of a comparative study on the convergence and computational performance of classical and modern π approximation algorithms.
+---
 
-## License
+## 👨‍💻 Author
 
-This project is released under the MIT License.
+This project was developed as part of a didactic and computational analysis on π approximations.  
+📘 *For educational and research purposes.*
 
-```
+---
 
+## 📄 License
+
+This project is released under the **MIT License**.  
+Feel free to use, modify, and share!
+
+---
